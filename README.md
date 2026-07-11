@@ -20,7 +20,7 @@ are actually related. This project does it in the right order:
 ## Dataset
 
 World Bank World Development Indicators, pulled live via the [World Bank API](https://data.worldbank.org/) —
-free, public, no signup or API key required (via the `wbdata` Python package).
+free, public
 
 ## Tech stack
 
