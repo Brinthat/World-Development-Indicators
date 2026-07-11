@@ -22,18 +22,12 @@ are actually related. This project does it in the right order:
 World Bank World Development Indicators, pulled live via the [World Bank API](https://data.worldbank.org/) —
 free, public
 
-## Tech stack
+## requirments
 
 PySpark (feature engineering, scaling, modelling), pandas/scipy/statsmodels (correlation, significance
 testing, VIF), matplotlib/seaborn (visualisation).
 
-## How to run
-
-Open `Health_Indicators_Relationship_Analysis.ipynb` in Google Colab (free, no install) and run all
-cells top to bottom — the data is pulled live from the World Bank API at runtime.
 
 ## Results summary
 
-*(Fill in after running: which indicators were significantly correlated, whether VIF flagged any
-collinearity, whether the log-transform or Random Forest improved on the raw linear model, and what
-that implies about the true shape of the relationship.)*
+All four nutrition indicators are significantly correlated with infant mortality. The analysis also revealed significant multicollinearity among 'stunting', 'wasting', and 'underweight'. While a log-linear relationship appears to describe the data better than a raw linear one, the overall R² values (around 0.64-0.65) indicate that a significant portion of the variance in infant mortality is still unexplained by these nutrition indicators alone. This suggests that other factors (e.g., healthcare access, sanitation, income, maternal education) are also crucial drivers of infant mortality, making nutrition indicators necessary but not sufficient predictors.
